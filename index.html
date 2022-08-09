@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Simplex</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico" sizes="512x512" type="image/x-icon">
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/d8c2c4bb1a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <header>
+                    <h3>Calculadora Simples</h3>
+                </header>
+                <form action="" id="formulario">
+                    <div>
+                        <label for="campoNum1">Primeiro número:</label>
+                        <input type="number" name="valor1" id="campoNum1" min="0" required>
+                    </div>
+                    <div>
+                        <label for="campoOperador">Selecione o operador:</label>
+                        <select name="slcOperador" id="campoOperador" required>
+                            <option value="" disabled selected>Operador</option> 
+                            <option value="soma">+ Soma</option>
+                            <option value="subtracao">- Subtração</option>
+                            <option value="multiplicacao">x Multiplicação</option>
+                            <option value="divisao">/ Divisão</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="campoNum2">Segundo número:</label>
+                        <input type="number" name="valor1" id="campoNum2" min="0" required>
+                    </div>
+
+                    <div id="btn-container">
+                        <button type="button" onclick="calcular()">
+                            <i class="fa-solid fa-calculator"></i> Calcular
+                        </button>
+                        <button type="submit" onclick="limparCampos()">
+                            <i class="fa-solid fa-trash"></i> Limpar
+                        </button>
+                    </div>
+
+                    <div>
+                        <option id="resultado" class="oculta">Resultado</option>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        
+        <!-- javascript -->
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
